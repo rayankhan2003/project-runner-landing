@@ -1,0 +1,190 @@
+"use client";
+
+import * as React from "react";
+import { Mail, MapPin, Phone } from "lucide-react";
+import { useState } from "react";
+
+export function ContactUs() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    setFormData({ name: "", email: "", message: "" });
+  };
+
+  return (
+    <section className="flex flex-col items-center py-[50px] gap-[50px] w-full bg-white px-4 md:px-8">
+      {/* Text Header */}
+      <div className="flex flex-col items-center gap-[7px]">
+        <h2 className="text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] font-nunito font-bold capitalize text-[#8A5BD5] text-center">
+          Contact Us
+        </h2>
+      </div>
+
+      {/* Main Row */}
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-[50px] w-full max-w-[1228px]">
+        {/* Left - Contact Form */}
+        <div className="flex flex-col items-center lg:items-start w-full sm:max-w-[480px]">
+          <div className="w-full bg-white border border-[#DDDDDD] rounded-[20px] shadow-[0_13px_19px_rgba(0,0,0,0.07)] px-[30px] sm:px-[40px] py-[40px] sm:py-[52px]">
+            <h3 className="text-[22px] sm:text-[24px] font-nunito text-[#3A3A3A] mb-6 text-center">
+              Contact Us
+            </h3>
+
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col gap-[30px] sm:gap-[45px] w-full"
+            >
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
+                className="w-full px-[18px] py-[15px] sm:px-[20px] sm:py-[19px] bg-white border border-[#E4E4E4] rounded-[39px] text-[16px] sm:text-[18px] font-nunito text-[#3A3A3A] focus:outline-none focus:ring-2 focus:ring-[#8A5BD5]"
+                required
+              />
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full px-[18px] py-[15px] sm:px-[20px] sm:py-[19px] bg-white border border-[#E4E4E4] rounded-[39px] text-[16px] sm:text-[18px] font-nunito text-[#3A3A3A] focus:outline-none focus:ring-2 focus:ring-[#8A5BD5]"
+                required
+              />
+
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                value={formData.message}
+                onChange={handleChange}
+                rows={5}
+                className="w-full px-[18px] py-[18px] sm:px-[20px] sm:py-[23px] bg-white border border-[#E4E4E4] rounded-[20px] text-[16px] sm:text-[18px] font-nunito text-[#3A3A3A] resize-none focus:outline-none focus:ring-2 focus:ring-[#8A5BD5]"
+                required
+              />
+
+              <button
+                type="submit"
+                className="w-full py-[10px] sm:py-[12px] bg-[#8A5BD5] rounded-full text-white text-[18px] sm:text-[22px] font-poppins font-medium hover:bg-[#7A4BC5] transition-colors duration-200"
+              >
+                Send
+              </button>
+            </form>
+          </div>
+        </div>
+
+        {/* Right - Contact Info & Map */}
+        <div className="flex flex-col gap-[40px] sm:gap-[50px] w-full lg:w-[725px]">
+          {/* Info Row */}
+          <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start text-center sm:text-left gap-[40px] sm:gap-[0px] w-full">
+            {/* Address */}
+            <div className="flex flex-col items-center sm:items-center gap-[10px] w-full sm:w-[33%]">
+              <MapPin className="w-[26px] h-[32px] text-[#3A3A3A]" />
+              <p className="text-[#3A3A3A] text-[15px] sm:text-[16px] font-graphik leading-[23px] text-center sm:text-left">
+                6386 Spring St undefined Anchorage, Georgia 12473 United States
+              </p>
+            </div>
+
+            {/* Phone */}
+            <div className="flex flex-col items-center sm:items-center gap-[10px] w-full sm:w-[33%]">
+              <Phone className="w-[21px] h-[34px] text-[#3A3A3A]" />
+              <p className="text-[#3A3A3A] text-[15px] sm:text-[16px] font-graphik leading-[23px]">
+                (843) 555-0130
+              </p>
+            </div>
+
+            {/* Email */}
+            <div className="flex flex-col items-center sm:items-center gap-[10px] w-full sm:w-[33%]">
+              <Mail className="w-[27px] h-[22px] text-[#3A3A3A]" />
+              <p className="text-[#3A3A3A] text-[15px] sm:text-[16px] font-graphik leading-[23px]">
+                willie.jennings@example.com
+              </p>
+            </div>
+          </div>
+
+          {/* Map */}
+          <div className="mx-auto w-full overflow-hidden rounded-[12px]">
+            <img
+              src="/assets/location.svg"
+              alt="Location Map"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Social Media */}
+          <div className="flex justify-center sm:justify-start flex-row gap-[20px] sm:gap-[24px]">
+            <a
+              href="#"
+              className="text-[#3A3A3A] hover:text-[#8A5BD5] transition-colors"
+            >
+              <svg
+                width="34"
+                height="28"
+                viewBox="0 0 34 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M33.3056 3.2141C32.0808 3.74244 30.7479 4.12269 29.3751 4.27079C30.8004 3.42398 31.8678 2.08617 32.377 0.508346C31.0395 1.30402 29.5742 1.86196 28.0462 2.15742C27.4076 1.47468 26.6352 0.93078 25.7771 0.559609C24.9191 0.188439 23.9938 -0.00204846 23.059 1.66124e-05C19.2765 1.66124e-05 16.2345 3.06601 16.2345 6.82845C16.2345 7.35679 16.2986 7.88513 16.4026 8.39346C10.739 8.09727 5.68769 5.39151 2.32951 1.24883C1.71762 2.29397 1.39696 3.48398 1.40091 4.69506C1.40091 7.0646 2.60569 9.15396 4.44288 10.3828C3.3602 10.3401 2.30286 10.0425 1.35688 9.51419V9.59824C1.35688 12.9164 3.7024 15.6662 6.82843 16.2986C6.24148 16.4511 5.63769 16.529 5.03126 16.5307C4.58698 16.5307 4.1667 16.4867 3.74243 16.4267C4.60699 19.1324 7.12462 21.0977 10.1226 21.1617C7.77705 22.9989 4.83914 24.0796 1.64907 24.0796C1.0767 24.0796 0.548356 24.0596 0 23.9956C3.02596 25.9368 6.61629 27.0576 10.4828 27.0576C23.0349 27.0576 29.9034 16.6588 29.9034 7.63297C29.9034 7.33678 29.9034 7.04059 29.8834 6.74439C31.2122 5.77176 32.377 4.56698 33.3056 3.2141Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+
+            <a
+              href="#"
+              className="text-[#3A3A3A] hover:text-[#8A5BD5] transition-colors"
+            >
+              <svg
+                width="33"
+                height="33"
+                viewBox="0 0 33 33"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M30.7399 0H1.28083C0.572371 0 0 0.572371 0 1.28083V30.7399C0 31.4484 0.572371 32.0208 1.28083 32.0208H30.7399C31.4484 32.0208 32.0208 31.4484 32.0208 30.7399V1.28083C32.0208 0.572371 31.4484 0 30.7399 0ZM27.0415 9.34606H24.4839C22.4786 9.34606 22.0903 10.2987 22.0903 11.6996V14.7856H26.8774L26.253 19.6167H22.0903V32.0208H17.0991V19.6207H12.9244V14.7856H17.0991V11.2233C17.0991 7.0886 19.6247 4.83514 23.3151 4.83514C25.0843 4.83514 26.6013 4.96722 27.0455 5.02726V9.34606H27.0415Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+
+            <a
+              href="#"
+              className="text-[#3A3A3A] hover:text-[#8A5BD5] transition-colors"
+            >
+              <svg
+                width="33"
+                height="33"
+                viewBox="0 0 33 33"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M30.7399 0H1.28083C0.572371 0 0 0.572371 0 1.28083V30.7399C0 31.4484 0.572371 32.0208 1.28083 32.0208H30.7399C31.4484 32.0208 32.0208 31.4484 32.0208 30.7399V1.28083C32.0208 0.572371 31.4484 0 30.7399 0ZM9.49816 27.2857H4.74708V12.0038H9.49816V27.2857ZM7.12462 9.91443C6.57998 9.91443 6.04756 9.75293 5.5947 9.45034C5.14184 9.14775 4.78888 8.71766 4.58046 8.21447C4.37203 7.71129 4.31749 7.15759 4.42375 6.62341C4.53 6.08923 4.79228 5.59855 5.1774 5.21343C5.56253 4.8283 6.0532 4.56603 6.58739 4.45977C7.12157 4.35352 7.67526 4.40805 8.17845 4.61648C8.68164 4.82491 9.11172 5.17787 9.41431 5.63072C9.7169 6.08358 9.87841 6.616 9.87841 7.16065C9.87441 8.68163 8.64161 9.91443 7.12462 9.91443ZM27.2857 27.2857H22.5386V19.8529C22.5386 18.0797 22.5066 15.8023 20.069 15.8023C17.5994 15.8023 17.2192 17.7315 17.2192 19.7248V27.2857H12.4761V12.0038H17.0311V14.0931H17.0951C17.7275 12.8924 19.2765 11.6235 21.59 11.6235C26.4011 11.6235 27.2857 14.7896 27.2857 18.9043V27.2857Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

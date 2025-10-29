@@ -1,0 +1,11 @@
+// CORRECT STRUCTURE
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "jsx": "react-jsx" // <-- Correct location
+    // ... other compiler options
+  }
+}
