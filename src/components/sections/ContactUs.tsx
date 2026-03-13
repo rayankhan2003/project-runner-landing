@@ -28,7 +28,7 @@ export function ContactUs() {
   };
 
   return (
-    <section className="flex flex-col items-center py-[50px] gap-[50px] w-full bg-white px-4 md:px-8">
+    <section id="contact-us" className="container mx-auto flex flex-col items-center py-[50px] gap-[50px] w-full bg-white px-4 md:px-8">
       {/* Text Header */}
       <div className="flex flex-col items-center gap-[7px]">
         <h2 className="text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] font-nunito font-bold capitalize text-[#8A5BD5] text-center">

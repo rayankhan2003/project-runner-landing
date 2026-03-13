@@ -99,8 +99,8 @@ const featureData = [
 
 export function AboutUs() {
   return (
-    <section className="bg-white py-10 md:py-24">
-      <div className="container mx-auto px-4 text-center">
+    <section id="about-us" className="bg-white py-10 md:py-24 scroll-mt-24">
+      <div className="container mx-auto px-4 md:px-8 text-center">
         {/* 3. Updated heading colors */}
         <h2 className="text-3xl font-bold mb-4 text-[#8A5BD5]">
           All-In-One Site{" "}

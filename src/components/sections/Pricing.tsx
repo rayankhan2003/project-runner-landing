@@ -21,9 +21,9 @@ export function Pricing() {
           <path
             d="M25 13C25 19.6274 19.6274 25 13 25C6.37258 25 1 19.6274 1 13C1 6.37258 6.37258 1 13 1M19.6667 13C19.6667 16.6819 16.6819 19.6667 13 19.6667C9.3181 19.6667 6.33333 16.6819 6.33333 13C6.33333 9.3181 9.3181 6.33333 13 6.33333M16.6772 9.46883L21.9558 10.0232L24.8172 6.01723L21.3835 4.87266L20.239 1.43895L16.233 4.30038L16.6772 9.46883ZM16.6772 9.46883L13 12.9999"
             stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       ),
@@ -50,9 +50,9 @@ export function Pricing() {
           <path
             d="M1.00039 9.00022H24.7003M6.24854 1.06753L12.8504 9.0003L19.4633 1.07309M24.4317 8.37229L19.8337 1.47521C19.7179 1.30155 19.66 1.21472 19.5835 1.15186C19.5158 1.09621 19.4378 1.05446 19.3539 1.02899C19.2592 1.00022 19.1548 1.00022 18.9461 1.00022H6.75452C6.54581 1.00022 6.44145 1.00022 6.34673 1.02899C6.26287 1.05446 6.18485 1.09621 6.11714 1.15186C6.04066 1.21472 5.98278 1.30155 5.867 1.47521L1.26895 8.37229C1.11823 8.59837 1.04287 8.71141 1.01586 8.83302C0.992003 8.94043 0.995102 9.05207 1.02488 9.15799C1.05859 9.27791 1.14011 9.38659 1.30314 9.60397L11.997 23.8624C12.2865 24.2484 12.4312 24.4414 12.6087 24.5104C12.7641 24.5709 12.9365 24.5709 13.092 24.5104C13.2694 24.4414 13.4142 24.2484 13.7037 23.8624L24.3975 9.60397C24.5605 9.38659 24.6421 9.27791 24.6758 9.15799C24.7056 9.05207 24.7087 8.94043 24.6848 8.83302C24.6578 8.71141 24.5824 8.59837 24.4317 8.37229Z"
             stroke="#1B223C"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       ),
@@ -70,8 +70,8 @@ export function Pricing() {
   ];
 
   return (
-    <section className="bg-white py-16 md:py-24">
-      <div className="container mx-auto px-4">
+    <section id="subscription" className="bg-white py-16 md:py-24">
+      <div className="container mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -166,8 +166,8 @@ export function Pricing() {
                     <path
                       d="M5.59961 14.6999C14.3496 22.0499 16.0996 21.6999 22.7496 8.3999"
                       stroke="#1B223C"
-                      stroke-width="2"
-                      stroke-linecap="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
                     />
                   </svg>
 
@@ -274,8 +274,8 @@ export function Pricing() {
                       <path
                         d="M5.59961 14.6999C14.3496 22.0499 16.0996 21.6999 22.7496 8.3999"
                         stroke="#1B223C"
-                        stroke-width="2"
-                        stroke-linecap="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
                       />
                     </svg>
 

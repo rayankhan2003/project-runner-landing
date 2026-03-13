@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 export function Hero() {
   const navigate = useNavigate();
   return (
-    <section className="container mx-auto px-4 py-20 md:py-32">
+    <section id="home" className="container mx-auto px-4 md:px-8 py-20 md:py-32">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
         <div className="text-center md:text-left">

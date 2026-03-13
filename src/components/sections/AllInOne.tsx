@@ -74,7 +74,7 @@ const taskFeatures = [
 
 export function AllInOne() {
   return (
-    <section className="bg-white py-16 md:py-24 space-y-24">
+    <section id="features" className="bg-white py-16 md:py-24 space-y-24">
       <div className="container mx-auto px-4">
         {/* Top Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -83,8 +83,8 @@ export function AllInOne() {
             <span className="text-[#F48C06]"> Features</span>
           </h2>
           <p className="text-gray-600 text-2xl ">
-            Skiline is one powerful online software suite that combines all the
-            tools needed to run a successful school or office.
+            Project Runner is one powerful online software suite that combines all the
+            tools needed to run a successful construction site.
           </p>
         </div>
 
@@ -129,7 +129,7 @@ export function AllInOne() {
 
       {/* 2️⃣ Block 2 — TEXT LEFT | IMAGE RIGHT */}
 
-      <div className="container max-w-6xl mx-auto px-4   -mt-24 md:-mt-36 relative z-0">
+      <div className="container max-w-6xl mx-auto px-4 md:px-8 -mt-24 md:-mt-36 relative z-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-18 items-center text-center md:text-left">
           {/* TEXT CONTENT */}
           <div className="md:pr-10 lg:pr-15">
@@ -156,7 +156,7 @@ export function AllInOne() {
       </div>
 
       {/* 3️⃣ Block 3 — IMAGE LEFT | TEXT RIGHT */}
-      <div className="container mx-auto px-4 mt-24 relative">
+      <div className="container mx-auto px-4 md:px-8 mt-24 relative">
         <div className="grid md:grid-cols-2 gap-12 ">
           {/* LEFT — FIGMA CARD */}
           <div className="relative w-full max-w-md mx-auto">
@@ -193,7 +193,7 @@ export function AllInOne() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g clip-path="url(#clip0_4425_15367)">
+                    <g clipPath="url(#clip0_4425_15367)">
                       <path
                         d="M71.8489 18.8534L30.7952 21.9573C29.0657 22.088 27.582 23.1825 26.9231 24.8131C26.2644 26.444 26.5632 28.2824 27.7032 29.6109L36.7064 40.1033L51.4985 32.5116C52.1792 32.1623 53.0097 32.4399 53.3534 33.1319C53.6971 33.8238 53.4239 34.668 52.7432 35.0174L37.9511 42.609L40.9119 56.2024C41.2868 57.9236 42.5646 59.2596 44.2468 59.6889C45.9323 60.119 47.6782 59.5519 48.8066 58.2173L75.638 26.4812C76.8596 25.0363 77.0936 23.0822 76.2488 21.3815C75.404 19.6808 73.7181 18.7119 71.8489 18.8534Z"
                         fill="#41BE90"
@@ -206,8 +206,8 @@ export function AllInOne() {
                       y2="-1.36544"
                       transform="matrix(0.889672 -0.4566 0.444866 0.895597 8.07227 49.9313)"
                       stroke="#41BE90"
-                      stroke-width="2.73088"
-                      stroke-linecap="round"
+                      strokeWidth="2.73088"
+                      strokeLinecap="round"
                     />
                     <line
                       x1="1.36544"
@@ -216,8 +216,8 @@ export function AllInOne() {
                       y2="-1.36544"
                       transform="matrix(0.889672 -0.4566 0.444866 0.895597 17.3496 51.6086)"
                       stroke="#FBA333"
-                      stroke-width="2.73088"
-                      stroke-linecap="round"
+                      strokeWidth="2.73088"
+                      strokeLinecap="round"
                     />
                     <line
                       x1="1.36544"
@@ -226,8 +226,8 @@ export function AllInOne() {
                       y2="-1.36544"
                       transform="matrix(0.889672 -0.4566 0.444866 0.895597 25.7891 53.717)"
                       stroke="#41BE90"
-                      stroke-width="2.73088"
-                      stroke-linecap="round"
+                      strokeWidth="2.73088"
+                      strokeLinecap="round"
                     />
                     <defs>
                       <clipPath id="clip0_4425_15367">
@@ -256,7 +256,7 @@ export function AllInOne() {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g clip-path="url(#clip0_4425_15328)">
+                <g clipPath="url(#clip0_4425_15328)">
                   <path
                     d="M39.3516 26.8198L39.3516 27.8941C39.3516 28.1201 39.172 28.3027 38.9496 28.3027L38.3613 28.3027L38.3613 26.4111L38.9496 26.4111C39.1719 26.4112 39.3516 26.5938 39.3516 26.8198Z"
                     fill="#F48C06"

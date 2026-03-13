@@ -37,9 +37,9 @@ export function FAQ() {
     setExpandedIndex(expandedIndex === index ? -1 : index);
 
   return (
-    <section className="bg-white py-10 md:py-20">
+    <section id="faqs" className="bg-white py-10 md:py-20">
       {/* Narrower outer container for the whole section */}
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="container max-w-7xl mx-auto px-4 md:px-8">
         {/* Heading (kept centered) */}
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-3xl md:text-4xl font-bold">
